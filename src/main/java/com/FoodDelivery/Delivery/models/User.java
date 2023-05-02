@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 @Data
 public class User {
     @Id
@@ -22,14 +22,14 @@ public class User {
     @JoinTable(
             name = "user_role",
             joinColumns = @JoinColumn(
-                    name = "user_id", referencedColumnName = "id"),
+                    name = "users_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(
                     name = "role_id", referencedColumnName = "id"))
     private Collection<UserRole> role;
 
     @OneToMany(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    Collection<OrderForm> orderForms;
+    @JoinColumn(name = "users_id", referencedColumnName = "id")
+    private Collection<OrderForm> orderForms;
 
     public User(){
 
