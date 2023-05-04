@@ -16,18 +16,23 @@ public class OrderForm {
     private Long id;
     @Column(name = "address")
     private String address;
+    @Column(name = "phoneNumber")
+    private String phoneNumber;
     @OneToMany(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
     @JoinColumn(name = "orders_id", referencedColumnName = "id")
     private Collection<FoodModel> foods;
     @Column(name = "status")
     private Boolean accepted;
+    @Column(name = "delivered")
+    private Boolean delivered;
 
     public OrderForm(){
 
     }
 
-    public OrderForm(String address, Collection<FoodModel> foods){
+    public OrderForm(String address, String phoneNumber, Collection<FoodModel> foods){
         this.address = address;
+        this.phoneNumber = phoneNumber;
         this.foods = foods;
     }
 }
