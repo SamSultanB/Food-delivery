@@ -22,9 +22,9 @@ public class OrderForm {
     @JoinColumn(name = "orders_id", referencedColumnName = "id")
     private Collection<FoodModel> foods;
     @Column(name = "status")
-    private Boolean accepted;
+    private Boolean accepted = false;
     @Column(name = "delivered")
-    private Boolean delivered;
+    private Boolean delivered = false;
 
     public OrderForm(){
 
