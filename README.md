@@ -12,7 +12,7 @@ you have to copy this repository and run it in your local computer
 ___
 Check it out
 
-![](swagger.png
+![](swagger.png)
 
 ___
 ___
