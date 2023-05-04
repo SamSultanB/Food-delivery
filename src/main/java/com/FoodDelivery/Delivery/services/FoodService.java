@@ -6,7 +6,7 @@ import java.util.Collection;
 
 public interface FoodService {
 
-    FoodModel saveFood(FoodModel foodModel);
+    void saveFood(FoodModel foodModel);
 
     Collection<FoodModel> getAllFoods();
 
