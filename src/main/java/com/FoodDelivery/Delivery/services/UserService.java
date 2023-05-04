@@ -13,6 +13,8 @@ public interface UserService extends UserDetailsService {
 
     User getUserById(Long id);
 
+    User findByEmail(String email);
+
     Collection<User> getAllUsers();
 
 }
